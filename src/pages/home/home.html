@@ -1,18 +1,67 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="red">
+        <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+        </button>
+      <ion-title>{{viewTitle}}</ion-title>
+        <ion-buttons>
+          <button ion-button icon-only (click)= "addEvent()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+
+        </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
-</ion-content>
+<ion-content padding class="bg" >
+  
+
+    <calendar [eventSource]="eventSource"
+    [calendarMode] = "calendar.mode"
+    [currentDate] = "calendar.currentDate"
+    (onEventSelected) = "onEventSelected($event)"
+    (onTitleChange) = "onViewTitleChangeed($event)"
+    (onTimeSelected) = "onTimeSelected($event)"
+    step="30"
+    class="calendar"
+    >
+
+
+    </calendar>
+
+
+
+
+  <ion-item>
+    <ion-input [(ngModel)] ="intputEvent" placeholder ="Type the event you want to add" ></ion-input>
+   </ion-item>
+  
+    <button ion-button (click)= "saveData()">Save Events</button>
+    <button ion-button (click)= "loadData()">Load Events</button>
+  
+    <ion-slides pager>
+
+      <ion-slide>
+        <img src="../assets/imgs/img.jpg" >
+      </ion-slide>
+    
+      <ion-slide >
+        <img src="../assets/imgs/img1.png" >
+      </ion-slide>
+    
+      <ion-slide >
+       <img src="../assets/imgs/img2.jpg" >
+      </ion-slide>
+     
+      <ion-slide >
+        <img src="../assets/imgs/img3.jpg" >
+      </ion-slide>
+      
+      <ion-slide>
+        <img src="../assets/imgs/img4.jpg">
+      </ion-slide>
+    
+    </ion-slides>
+  </ion-content>
