@@ -12,6 +12,7 @@ import { RunningPage } from '../pages/running/running';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
+  
 
   rootPage: any = HomePage;
 
