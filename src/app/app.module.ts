@@ -12,6 +12,7 @@ import { RunningPage } from '../pages/running/running';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import{NgCalendarModule} from 'ionic2-calendar';
+import{Flashlight} from '@ionic-native/flashlight';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import{NgCalendarModule} from 'ionic2-calendar';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Flashlight
   ]
 })
 export class AppModule {}
