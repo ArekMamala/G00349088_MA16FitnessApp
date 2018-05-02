@@ -3,12 +3,11 @@
         <button ion-button menuToggle>
                 <ion-icon name="menu"></ion-icon>
         </button>
-      <ion-title>{{viewTitle}}</ion-title>
+      <ion-title>{{viewTitle}}AM16Fitness</ion-title>
         <ion-buttons>
           <button ion-button icon-only (click)= "addEvent()">
             <ion-icon name="add"></ion-icon>
           </button>
-
         </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -16,9 +15,12 @@
 
 
 <ion-content padding class="bg" >
-
-
-    <calendar [eventSource]="eventSource"
+<p style="color:rgba(255, 255, 255, 0.952); font-size: 40px; font-style: italic;  font-weight: 800; align-content: center">
+  Welcome to AM16Fitness The place Where We Hustle for that muscle. 
+</p>
+<div class="cal">
+<calendar 
+ [eventSource]="eventSource"
     [calendarMode] = "calendar.mode"
     [currentDate] = "calendar.currentDate"
     (onEventSelected) = "onEventSelected($event)"
@@ -27,30 +29,6 @@
     step="30"
     class="calendar"
     >
-    
-    
   </calendar>
-  <ion-slides pager>
-
-      <ion-slide>
-        <img src="../assets/imgs/img.jpg" >
-      </ion-slide>
-    
-      <ion-slide >
-        <img src="../assets/imgs/img1.png" >
-      </ion-slide>
-    
-      <ion-slide >
-       <img src="../assets/imgs/img2.jpg" >
-      </ion-slide>
-     
-      <ion-slide >
-        <img src="../assets/imgs/img3.jpg" >
-      </ion-slide>
-      
-      <ion-slide>
-        <img src="../assets/imgs/img4.jpg">
-      </ion-slide>
-    
-    </ion-slides>
+</div>
   </ion-content>

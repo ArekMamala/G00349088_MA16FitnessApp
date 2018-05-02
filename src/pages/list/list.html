@@ -1,23 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>List</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-</ion-content>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Exercises</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-card>
+          <img src="assets/imgs/pushups.png"/>
+          <ion-card-content>
+            <ion-card-title>
+                Pushups
+            </ion-card-title>
+            <p>
+                1.When down on the ground, set your hands at a distance that is slightly wider than shoulder-width apart. ...
+                2.Your feet should be set up in a way that feels right and comfortable to you. ...
+                3.Think of your body as one giant straight line – from the top of your head down through your heels.
+            </p>
+          </ion-card-content>
+        </ion-card> 
+        <ion-card>
+            <img src="assets/imgs/pullups.jpg"/>
+            <ion-card-content>
+              <ion-card-title>
+                  Pullups
+              </ion-card-title>
+              <p>
+                  Pull-ups. Hang in the hollow position with hands slightly wider than your
+                  shoulders, thumb-less grip and pull the full range of motion until the 
+                  chin is over the bar. When you are close to getting over the bar, 
+                  shoot your elbows down and back to increase the height that you will get over the bar.
+              </p>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+              <img src="assets/imgs/situps.jpg"/>
+              <ion-card-content>
+                <ion-card-title>
+                    Situps
+                </ion-card-title>
+                <p>
+                    Lie on your back on an exercise mat. Place your hands behind your head, lightly touching the back of your skull. Bend your knees and plant your feet about hip-distance apart.
+                    Exhale and engage your abdominal muscles by pulling your belly button in toward your spine. Keep this engagement as you roll up as high as possible.
+                    Inhale as you slowly roll back to the starting position to complete one sit-up, or crunch if you don't come all the way up.
+                </p>
+              </ion-card-content>
+            </ion-card>
+            <ion-card>
+                <img src="assets/imgs/squats.jpg"/>
+                <ion-card-content>
+                  <ion-card-title>
+                      Squats
+                  </ion-card-title>
+                  <p>
+                      Keep your back straight, with your neutral spine, and your chest and 
+                      shoulders up. Keep looking straight ahead at that spot on the wall. 
+                      As you squat down, focus on keeping your knees in line with your feet. 
+                      Many new lifters need to focus on pushing their knees out so they track with their feet.
+                  </p>
+                </ion-card-content>
+              </ion-card>
+  </ion-content>
+  
