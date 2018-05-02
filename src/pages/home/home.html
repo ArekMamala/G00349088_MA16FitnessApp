@@ -16,7 +16,7 @@
 
 
 <ion-content padding class="bg" >
-  
+
 
     <calendar [eventSource]="eventSource"
     [calendarMode] = "calendar.mode"
@@ -27,21 +27,10 @@
     step="30"
     class="calendar"
     >
-
-
-    </calendar>
-
-
-
-
-  <ion-item>
-    <ion-input [(ngModel)] ="intputEvent" placeholder ="Type the event you want to add" ></ion-input>
-   </ion-item>
-  
-    <button ion-button (click)= "saveData()">Save Events</button>
-    <button ion-button (click)= "loadData()">Load Events</button>
-  
-    <ion-slides pager>
+    
+    
+  </calendar>
+  <ion-slides pager>
 
       <ion-slide>
         <img src="../assets/imgs/img.jpg" >

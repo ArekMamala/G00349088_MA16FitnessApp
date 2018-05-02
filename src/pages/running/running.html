@@ -1,17 +1,58 @@
 
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Running ?</ion-title>
+    <ion-navbar>
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title >What Feels Like The End Is Offten The Beginning</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-fab top center>
-    <button ion-fab color="{{isOn ? 'green' : 'light'}}" (click)="toggleFlash()">
-      <ion-icon name="{{isOn ? 'ios-flash' : 'ios-flash-outline'}}"></ion-icon>
-    </button>
-  </ion-fab>
+  <h2 ion-text color="secondary" >
+    Running in the dark ??? Stay safe and use our flashLight. StaySafe
+  </h2>
+  <ion-item>
+    <span>The flashlight is {{isOn ? 'on' : 'off'}}</span>
+  </ion-item>  
+  <button ion-button ion-icon color="danger" (click)="lightOn()" full>
+    <ion-icon name="globe"></ion-icon>
+    Flashlight ON
+  </button>
+  <button ion-button ion-icon color="danger" (click)="lightOff()" full>
+    <ion-icon name="globe"></ion-icon>
+    Flashlight Off
+  </button>
+  <h2 ion-text color="primary">Challenge of the week !!! It always feels impossible until it's done </h2>
+  <p style="font: initial; font-size: 20px; ">1.Run 5km in the week - 1km per day </p>
+  <p style="font: initial; font-size: 20px;">2.Do 150 pushups in the week - 30 a day</p>
+  <p style="font: initial; font-size: 20px;">2.Do 50 pullups in the week - 10 a day</p>
+  <p style="font: initial; font-size: 20px;">2.Do 150 situps in the week - 30 a day</p>
+  <p style="font: initial; font-size: 20px;">2.Do 200 squats in the week - 40 a day</p>
+
+  <ion-item>
+    <ion-input [(ngModel)] ="intputEvent" placeholder ="Type the amount of km ran this week" ></ion-input>
+  </ion-item>
+    
+  <ion-item>
+    <ion-input [(ngModel)] ="pushUps" placeholder ="Type the amount of pushups done this week" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)] ="pullUps" placeholder ="Type the amount of pullups done this week" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)] ="sitUps" placeholder ="Type the amount of sitUps done this week" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)] ="squats" placeholder ="Type the amount of squats done this week" ></ion-input>
+  </ion-item>
+  
+      <button ion-button (click)= "saverun()">Save Events</button>
+      <button ion-button (click)= "loadData()">Load Events</button>
+    
 </ion-content>
