@@ -13,6 +13,7 @@ export class LocationPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private lp:LocationProvider) {
   }
 
+  //api data
   ionViewDidLoad() {
    // console.log('ionViewDidLoad LocationPage');
    this.lp.GetMovieData().subscribe(data =>{

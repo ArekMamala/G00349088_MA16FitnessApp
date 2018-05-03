@@ -30,6 +30,7 @@ export class HomePage {
    
   }
 
+  //adding event
   addEvent(){
     let modal = this.modalCtrl.create('EventModalPage', {selectedDay: this.selectedDay});
     modal.present();
@@ -51,14 +52,15 @@ export class HomePage {
 
     })
   }
+  //event title
   onViewTitleChanged(Title){
     this.viewTitle= Title;
-
   }
+  //event day
   onTimeSelected(ev){
     this.selectedDay =ev.selectedTime;
-
   }
+  //eventstart end 
   onEventSelected(event){
     let start = moment(event.startTime).format('LLLL');
     let end = moment(event.endTime).format('LLLL');

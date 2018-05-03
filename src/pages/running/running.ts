@@ -31,6 +31,7 @@ export class RunningPage {
     this.storage.set("sq", this.squats)
     }
     
+    //loading data to the console
     loadData(){
     this.storage.get("run").then((val)=>{
         if(val ==null){
@@ -86,18 +87,19 @@ export class RunningPage {
       console.log("error =" +err);  
     })
   }
-
+//switchlight on
   lightOn(){
     this.flashlight.switchOn();
     this.updateStatus();
-      }
-      lightOff(){
-        this.flashlight.switchOff();
-        this.updateStatus();
-      }
-      updateStatus(){
-        this.isOn = this.flashlight.isSwitchedOn();
-      }
+  }
+//switching light off
+  lightOff(){
+    this.flashlight.switchOff();
+    this.updateStatus();
+  }
+  updateStatus(){
+     this.isOn = this.flashlight.isSwitchedOn();
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RunningPage');
