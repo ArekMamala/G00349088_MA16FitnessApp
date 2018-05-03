@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LocationPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {LocationProvider} from '../../providers/location/location';  
 
 @IonicPage()
 @Component({
@@ -14,12 +8,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'location.html',
 })
 export class LocationPage {
+  movies:any[]=[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private lp:LocationProvider) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LocationPage');
+   // console.log('ionViewDidLoad LocationPage');
+   this.lp.GetMovieData().subscribe(data =>{
+     this.movies = data.Search;
+   })
   }
 
 }

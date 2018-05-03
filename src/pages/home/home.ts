@@ -68,27 +68,4 @@ export class HomePage {
     });
   alert.present();
   }
-
-
-
-
-
-  saveData(){
-    this.storage.set("event", this.intputEvent)
-    }
-    
-    loadData(){
-    this.storage.get("event").then((val)=>{
-        if(val ==null){
-            console.log("no curent events ");
-        }else{
-            console.log("event"+ val);
-        }
-    })
-    .catch((err)=>{
-        console.log("error =" +err);
-    
-    })
-    
-    }
 }

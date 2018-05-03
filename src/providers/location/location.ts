@@ -10,7 +10,7 @@ export class LocationProvider {
   }
 
   GetMovieData():Observable<any>{
-    return this.http.get('https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyCIQUtsxrHdiLB7lMmFg8CyujswylqhbCQ');
+    return this.http.get('http://www.omdbapi.com/?apikey=2ee2ed84&s=sport');
   }
 
 }
