@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import{NgCalendarModule} from 'ionic2-calendar';
 import{Flashlight} from '@ionic-native/flashlight';
+import { LocationProvider } from '../providers/location/location';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import{Flashlight} from '@ionic-native/flashlight';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Flashlight
+    Flashlight,
+    LocationProvider
   ]
 })
 export class AppModule {}
